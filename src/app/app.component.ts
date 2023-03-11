@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Stockinterface, StocksService} from "./services/stocks.service";
+import {StockModel} from "./Model/Entities/app.model";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularInAction';
+
 }

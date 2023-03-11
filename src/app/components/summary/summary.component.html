@@ -1,0 +1,15 @@
+
+<div class="mdl-card stock-card mdl-shadow--2dp"  [ngClass]="{increase: isPositive(), decrease: isNegative()}" style="width: 100%;" >
+<!--  *ngFor="let s of stockm"-->
+  <span>
+    <div class="mdl-card__title" >
+      <h4 style="color: #fff; margin: 0">
+        Nom : {{stocksummary.symbol.toUpperCase()}} <br/>
+        Prix : {{stocksummary.lastTradePriceOnly | currency: 'USD' }} <br/>
+        Change : {{stocksummary.change | currency:'USD':'symbol':'.2'}}<br/>
+        Variation : {{stocksummary.changeInPercent | percent: '.2'}}<br/>
+        <button  (click)="remove(stocksummary)"> Supprimer le stock </button>
+      </h4>
+    </div>
+  </span>
+</div>
